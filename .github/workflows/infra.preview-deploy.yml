@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - tastylog/10_infra/**
-      - tastylog/.github/workflows/**
+      - 10_infra/**
+      - .github/workflows/**
   workflow_dispatch:
 
 permissions:
