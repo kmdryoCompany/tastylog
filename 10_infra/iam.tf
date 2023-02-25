@@ -63,7 +63,6 @@ resource "aws_iam_role" "ecs_task_exec_iam_role" {
     Name    = "${var.project}-${var.environment}-ecs-task-exec-iam-role"
     Project = var.project
     Env     = var.environment
-    Message = "Hello World"
   }
 }
 
