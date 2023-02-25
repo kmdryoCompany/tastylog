@@ -61,8 +61,8 @@ jobs:
             -var 'username=${{ secrets.MYSQL_USERNAME }}' \
             -var 'password=${{ secrets.MYSQL_PASSWORD }}' \
             -input=false \
-            -no-color \
-            -detailed-exitcode
+            -detailed-exitcode \
+            -no-color
       - name: Slack Notify
         if: steps.plan.outputs.exitcode == 2
         uses: slackapi/slack-github-action@v1.22.0
