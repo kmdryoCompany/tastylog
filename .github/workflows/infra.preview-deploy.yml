@@ -56,12 +56,12 @@ jobs:
         id: plan
         run: |
           terraform plan \
+            -detailed-exitcode \
             -var 'project=${{ env.TF_PROJECT }}' \
             -var 'environment=${{ env.TF_ENVIRONMENT }}' \
             -var 'username=${{ secrets.MYSQL_USERNAME }}' \
             -var 'password=${{ secrets.MYSQL_PASSWORD }}' \
             -input=false \
-            -detailed-exitcode \
             -no-color
       - name: Slack Notify
         if: steps.plan.outputs.exitcode == 2
